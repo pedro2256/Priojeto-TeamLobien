@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Poppins:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@300&family=Qwitcher+Grypen:wght@700&family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,900;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: black;
+}
+/* CABEÇALHO */
+header{
+    /* border: 3px solid black; */
+    display: flex;
+    height: 12vh;
+    width: 100%;
+    /* background: black; */
+    justify-content: space-between;
+}
+.logo{
+    margin-left: 8vw;
+    padding-top: 10px;
+    display: flex;
+    /* border: 2px solid green; */
+    justify-content: center;
+    align-items: center;
+    width: 10%;
+}
+.logo img{
+    height: 130px;
+    width: 130px;
+}
+.headBtns{
+    /* margin-right: 8vw; */
+    display: flex;
+    /* border: 2px solid red; */
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.headBtns a{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    /* color: white; */
+    /* margin-right: 3vw; */
+    /* border: 2px dotted black; */
+    padding: 10px;
+   
+}
+.divBusca{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:white;
+    border:solid 1px;
+    border-radius:5px;
+    width:300px;
+   
+}
+#txtBusca{
+    background-color:transparent;
+    padding: 10px 15px;
+    font-size:15px;
+    text-align: left;
+    border:none;
+    height:35px;
+    width:260px;
+}
+::placeholder{
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.266);
+}
+
+/* BARRA DE NAVEGAÇÃO */
+nav{
+    /* margin-top: 10px; */
+    box-shadow: 0 0 2px 2px white;
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+   
+}
+nav a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    /* border: 1px solid black; */
+    padding: 6px;
+    font-family: "montserrat", sans-serif;
+
+}
+
+nav a:hover{
+    color:#BF25B6;
+}
+/* LOGIN */
+.login .seta_login{
+    width: 0;
+    height: 0;
+    position: absolute;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid rgb(232, 230, 233);
+    left: 1145px;
+    top: 65px;
+    display: none;
+    
+}
+.login .form_login{
+    position: absolute;
+    width: 300px;
+    height: auto;
+    background:  rgb(232, 230, 233);
+    left: 1047px;
+    top: 78px;
+    border-radius: 2px;
+    border-bottom: 5px solid rgb(92, 90, 90);
+    display: none;
+    z-index: 1;
+}
+
+.login form{
+    width: 250px;
+    margin: 25px auto;
+    font-size: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+    color: rgb(44, 42, 42);
+    letter-spacing: -0.05em;
+}
+
+.login .esqueci_senha{
+    text-decoration: none;
+    position: relative;
+    top: 15px;
+    font-size: 15px;
+    color: gray;
+}
+
+.login .cadastro{
+    text-decoration: none;
+    position: relative;
+    top: 22px;
+    font-size: 16px;
+    color: rgb(50, 8, 90);
+}
+
+.login_input[type="text"],
+.login_input[type="password"]{
+    width: 220px;
+    height: 30px;
+    border:0px;
+    outline: none;
+    box-shadow: inset 0 0 10px rgb(73, 19, 75);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    font-family: sans-serif, Arial;
+    font-size: 15px;
+}
+
+input[type="submit"]{
+    width: 89%;
+    height: 35px;
+    background: #431370;
+    font: 20px;
+    font-weight: bold;
+    font-family: sans-serif,Arial;
+    color: white;
+    outline: none;
+    border: 0px;
+    border-radius: 3px;
+    letter-spacing: -0.05em;
+}
+
+input[type="submit"]:hover{
+    background: #2d0157;
+}
+
+/* Fechamento do LOGIN */
+
+/* EQUIPE */
+.title h1{
+    padding-top: 50px;
+    gap: 20px;
+    color: #535353;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 40px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.title h1 span{
+    color: #9c09a1;
+}
+.container{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* flex-wrap: wrap; */
+    margin:40px 0;
+}
+
+.container .card{
+    position: relative;
+    width: 260px;
+    height: 400px;
+    background: rgb(255, 255, 255,0.06);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    margin:20px;
+    border-radius: 12px;
+    border:1px solid rgba(189, 4, 189, 0.1);
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    backdrop-filter: blur (10px) saturate(180%);
+}
+
+.container .card .content{
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0.7;
+    transition: .5s;
+}
+
+
+.container .card .icones{
+    position: absolute;
+    bottom: 50px;
+    display: flex;
+}
+
+.container .card .icones li{
+    list-style: none;
+    margin: 0 10px;
+    transform:translateY(40px);
+    opacity: 0;
+    transition: .5s;
+}
+
+.container .card:hover .icones li{
+    transform: translateY(0px);
+    opacity: 1;
+    
+}
+
+.container .card .icones li a{
+    color:rgb(151, 12, 206);
+    font-size: 24px;
+}
+
+.container .card:hover .content{
+opacity: 1;
+}
+
+.container .card .content .image_Content h3{
+color: rgb(235, 235, 235);
+text-transform: uppercase;
+letter-spacing: 2px;
+font-weight: 500;
+font-size:18px;
+text-align: center;
+margin: 20px 0 10px;
+line-height: 1.1em;
+}
+
+.container .card .content .image_Content h3 span{
+    font-size: 12px;
+    font-weight: 300;
+    text-transform:initial;
+}
+
+.container .card .content .image{
+    position:relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow:hidden;
+    /* border:10px solid rgb(0, 0, 0, 0.25); */
+}
+
+.container .card .content .image img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Fechamento da EQUIPE */
+
+/* RODAPÉ */
+footer{
+    /* padding: 25px; */
+    /* margin-top: 20px; */
+    color: white;
+    display: flex;
+    flex-flow: row nowrap;
+    /* border: 1px double white; */
+    width: 100%;
+    height: auto;
+}
+.rp1{
+    margin-left: 4vw;
+    display: flex;
+    height: 25vh;
+    flex: 25%;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.rp2, .rp3, .rp4{
+    margin-top: 12vh;
+    margin-right: 4vw;
+    height: 15vh;
+    text-align: justify;
+    padding: 20px;
+    /* border: 1px dotted white; */
+    flex: 25%;  
+}
+
+H4{
+    color: #72386a;
+    padding: 3px;
+}
+footer a{
+    color: white;
+    padding: 3px;
+}
+.cr{
+    margin-top: 30px;
+    color: white;
+    text-align: center;
+}
+.cr a{
+    color: #72386a;
+}

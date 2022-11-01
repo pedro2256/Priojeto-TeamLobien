@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/equipe.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>LOBIEN</title>
+  </head>
+  <body>
+    <!-- CABEÇALHO -->
+    <header>
+      <div class="logo">
+        <a href="./index.html" class=""
+          ><img src="./img/logo-lobien.png" alt="logo-lobien"
+        /></a>
+      </div>
+      <div class="headBtns">
+        <div class="divBusca">
+          <input
+            type="text"
+            id="txtBusca"
+            placeholder="O que deseja encontrar?"
+          />
+          <img
+            style="width: 25px; height: 25px"
+            src="./img/pesquisa-icon.png"
+            id="btnBusca"
+            alt="Buscar"
+          />
+        </div>
+        <a href="#" id="login_id">
+          <img style="height: 30px" src="./img/cadastro-icon.png" alt="" />
+        </a>
+        <a href="#">
+          <img
+            style="height: 30px; margin-right: 8vw"
+            src="./img/carrinho-icon.png"
+            alt=""
+        /></a>
+      </div>
+    </header>
+    <!-- BARRA DE NAVEGAÇÃO -->
+    <nav>
+      <a href="./wolfPack.html">PRODUTOS</a>
+      <a href="./sobre.html">SOBRE</a>
+      <a href="">EQUIPE</a>
+      <a href="./contato.html">CONTATO</a>
+    </nav>
+    <!-- LOGIN -->
+    <section class="login">
+      <div class="seta_login"></div>
+      <div class="form_login">
+        <form>
+          <label>Nome de usuário</label>
+          <div>
+            <input
+              class="login_input"
+              type="text"
+              placeholder="Seu nome de usuário"
+              required
+            />
+          </div>
+          <label>Senha</label>
+          <div>
+            <input
+              class="login_input"
+              type="password"
+              placeholder="Sua senha"
+              required
+            />
+          </div>
+          <div>
+            <input type="submit" value="Entrar" />
+          </div>
+
+          <div>
+            <a class="esqueci_senha" href="#">Esqueci minha senha</a>
+          </div>
+
+          <div>
+            <a class="cadastro" href="#"
+              >Não tem uma conta?<strong> Cadastre-se</strong></a
+            >
+          </div>
+        </form>
+      </div>
+    </section>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        var seta = $(".login .seta_login");
+        var formulario = $(".login .form_login");
+        var status = false;
+        $("#login_id").click(function (event) {
+          event.preventDefault();
+          if (status == false) {
+            seta.fadeIn();
+            formulario.fadeIn();
+            status = true;
+          } else {
+            seta.fadeOut();
+            formulario.fadeOut();
+            status = false;
+          }
+        });
+      });
+    </script>
+    <!-- Fechamento do LOGIN -->
+
+<!-- EQUIPE -->
+    <main>
+    <section> 
+             <div class="title">
+                <h1>NOSSA <span>EQUIPE</span></h1>
+            </div>
+        <div class="container">
+            <div class="card">
+                <div class="content">
+                    <div class="image">
+                        <img src="img/Rafael.png">
+                    </div>
+                    <div class="image_Content">
+                        <h3>Rafael<br><span>Co-facilitador</span></h3>
+                    </div>
+                </div>
+                <ul class="icones">
+                    <li style="-ms-ime-mode: 1;"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li style="-ms-ime-mode: 2;"><a href="#"><i class="fa-brands fa-github"></i></i></a></li>
+                    <li style="-ms-ime-mode: 3;"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="content">
+                    <div class="image">
+                        <img src="img/Adriele.png">
+                    </div>
+                    <div class="image_Content">
+                        <h3>Adriele<br><span>Gestora de conhecimento</span></h3>
+                    </div>
+                </div>
+                <ul class="icones">
+                    <li style="-ms-ime-mode: 1;"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li style="-ms-ime-mode: 2;"><a href="#"><i class="fa-brands fa-github"></i></i></a></li>
+                    <li style="-ms-ime-mode: 3;"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="content">
+                    <div class="image">
+                        <img src="img/Andrew.png">
+                    </div>
+                    <div class="image_Content">
+                        <h3>Andrew<br><span>Gestor de gente e conhecimento</span></h3>
+                    </div>
+                </div>
+                <ul class="icones">
+                    <li style="-ms-ime-mode: 1;"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li style="-ms-ime-mode: 2;"><a href="#"><i class="fa-brands fa-github"></i></i></a></li>
+                    <li style="-ms-ime-mode: 3;"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="content">
+                    <div class="image">
+                        <img src="img/Pedro.png">
+                    </div>
+                    <div class="image_Content">
+                        <h3>Pedro<br><span>Colaborador I</span></h3>
+                    </div>
+                </div>
+                <ul class="icones">
+                    <li style="-ms-ime-mode: 1;"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li style="-ms-ime-mode: 2;"><a href="#"><i class="fa-brands fa-github"></i></i></a></li>
+                    <li style="-ms-ime-mode: 3;"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div class="content">
+                    <div class="image">
+                        <img src="img/Camila.png">
+                    </div>
+                    <div class="image_Content">
+                        <h3>Camila<br><span>Colaboradora II</span></h3>
+                    </div>
+                </div>
+                <ul class="icones">
+                    <li style="-ms-ime-mode: 1;"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li style="-ms-ime-mode: 2;"><a href="https://github.com/C4m0mila"><i class="fa-brands fa-github"></i></i></a></li>
+                    <li style="-ms-ime-mode: 3;"><a href="https://www.instagram.com/c4m0mila/"><i class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+</main>
+<!-- Fechamento da EQUIPE -->
+
+ <!-- RODAPÉ -->
+ <footer>
+    <div class="rp1">
+      <img style="width: 230px; height: 230px" src="./img/logo-lobien.png" />
+    </div>
+
+    <div class="rp2">
+      <h4>INFORMAÇÕES</h4>
+      <a style="text-decoration: none" href="./sobre.html">SOBRE NÓS</a><br />
+      <a style="text-decoration: none" href="./contato.html">CONTATO</a>
+    </div>
+    <div class="rp3">
+      <h4>PRODUTOS</h4>
+      <a style="text-decoration: none" href="./wolfPack.html">WOLF PACK</a><br />
+      <a style="text-decoration: none" href="./wolfPack.html">HARDWARE</a>
+    </div>
+    <div class="rp4">
+      <h4>CONTA</h4>
+      <a style="text-decoration: none" href="#">MINHA CONTA</a><br />
+      <a style="text-decoration: none" href="#">MINHAS COMPRAS</a>
+      <br /><br />
+      <a href="#"><img src="./img/youtube.png" alt="" /></a>
+      <a href="#"><img src="./img/twitter.png" alt="" /></a>
+      <a href="#"><img src="./img/instagram.png" alt="" /></a>
+      <a href="#"><img src="./img/facebook.png" alt="" /></a>
+    </div>
+  </footer>
+  <br />
+  <div class="cr">
+    Criado e desenvolvido por
+    <a style="text-decoration: none" href=""> Team Lobien.</a> Todos os
+    direitos reservados.©
+  </div>
+  <br />
+</body>
+</html>

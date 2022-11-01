@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/contato.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/script.js"></script>
+    <title>LOBIEN</title>
+</head>
+
+<body>
+    <!-- CABEÇALHO -->
+    <header>
+        <div class="logo">
+          <a href="./index.html" class=""
+            ><img src="./img/logo-lobien.png" alt="logo-lobien"
+          /></a>
+        </div>
+        <div class="headBtns">
+          <div class="divBusca">
+            <input
+              type="text"
+              id="txtBusca"
+              placeholder="O que deseja encontrar?"
+            />
+            <img
+              style="width: 25px; height: 25px"
+              src="./img/pesquisa-icon.png"
+              id="btnBusca"
+              alt="Buscar"
+            />
+          </div>
+          <a href="#" id="login_id">
+            <img style="height: 30px" src="./img/cadastro-icon.png" alt="" />
+          </a>
+          <a href="#">
+            <img style="height: 30px; margin-right:8vw;" src="./img/carrinho-icon.png" alt=""
+          /></a>
+        </div>
+      </header>
+      <!-- BARRA DE NAVEGAÇÃO -->
+      <nav>
+        <a href="./wolfPack.html">PRODUTOS</a>
+        <a href="./sobre.html">SOBRE</a>
+        <a href="./equipe.html">EQUIPE</a>
+        <a href="./contato.html">CONTATO</a>
+      </nav>
+      <!-- LOGIN -->
+    <section class="login">
+      <div class="seta_login"></div>
+      <div class="form_login">
+        <form>
+          <label>Nome de usuário</label>
+          <div>
+            <input
+              class="login_input"
+              type="text"
+              placeholder="Seu nome de usuário"
+              required
+            />
+          </div>
+          <label>Senha</label>
+          <div>
+            <input
+              class="login_input"
+              type="password"
+              placeholder="Sua senha"
+              required
+            />
+          </div>
+          <div>
+            <input type="submit" value="Entrar" />
+          </div>
+
+          <div>
+            <a class="esqueci_senha" href="#">Esqueci minha senha</a>
+          </div>
+
+          <div>
+            <a class="cadastro" href="#"
+              >Não tem uma conta?<strong> Cadastre-se</strong></a
+            >
+          </div>
+        </form>
+      </div>
+    </section>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        var seta = $(".login .seta_login");
+        var formulario = $(".login .form_login");
+        var status = false;
+        $("#login_id").click(function (event) {
+          event.preventDefault();
+          if (status == false) {
+            seta.fadeIn();
+            formulario.fadeIn();
+            status = true;
+          } else {
+            seta.fadeOut();
+            formulario.fadeOut();
+            status = false;
+          }
+        });
+      });
+    </script>
+    <!-- Fechamento do LOGIN -->
+    
+    <!-- CONTATO -->
+    <section class="contato">
+            <h1 class="cabeçalho">ENTRE EM <span>CONTATO</span></h1>
+        <div class="icones_container">
+            <div class="icones">
+                <i class="fas fa-envelope"></i>
+                <h3>EMAIL</h3>
+                <p>lobien@gmail.com</p>
+                <p>lobiencompany@gmail.com</p>
+            </div>
+
+            <div class="icones">
+                <i class="fas fa-phone"></i>
+                <h3>TELEFONE</h3>
+                <p>55+ (21) 958679307</p>
+                <p>55+ (21) 967822368</p>
+            </div>
+
+            <div class="icones">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>ENDEREÇO</h3>
+                <p>Inhaúma - Rio de Janeiro - RJ</p>
+            </div>
+
+        </div>
+
+        <div class="fale"><h3>FALE CONOSCO</h3>
+        </div>
+
+        <div class="formulario">
+            <form action="">
+                <input id="nome" type="text" placeholder="Nome" class="box" required/>
+
+                <input id="email" type="email" placeholder="Email" class="box" required/>
+
+                <input id="telefone" type="number"  placeholder="(xx)xxxxx-xxxx" class="box" required/>
+
+                <textarea id="msg" name="" placeholder="Mensagem" cols="30" rows="10" required></textarea>
+                <input type="submit" class="btn" value="Enviar mensagem" onclick="validar()"/>
+            </form>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29409.395363219628!2d-43.29874651922959!3d-22.87001434193873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997c67df14442d%3A0x75909d1c3d5cf3d2!2sInhauma%2C%20Rio%20de%20Janeiro%20-%20RJ!5e0!3m2!1spt-BR!2sbr!4v1662938157781!5m2!1spt-BR!2sbr" width="allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </section>
+  <!-- Fechamento do CONTATO -->
+
+            <!-- RODAPÉ -->
+            <footer>
+                <div class="rp1">
+                    <img style="width: 230px; height: 230px" src="./img/logo-lobien.png" />
+                </div>
+
+                <div class="rp2">
+                    <h4>INFORMAÇÕES</h4>
+                    <a style="text-decoration: none" href="#">SOBRE NÓS</a><br />
+                    <a style="text-decoration: none" href="#">CONTATO</a>
+                </div>
+                <div class="rp3">
+                    <h4>PRODUTOS</h4>
+                    <a style="text-decoration: none" href="#">WOLF PACK</a><br />
+                    <a style="text-decoration: none" href="#">HARDWARE</a>
+                </div>
+                <div class="rp4">
+                    <h4>CONTA</h4>
+                    <a style="text-decoration: none" href="#">MINHA CONTA</a><br />
+                    <a style="text-decoration: none" href="#">MINHAS COMPRAS</a>
+                    <br /><br />
+                    <a href="#"><img src="./img/youtube.png" alt="" /></a>
+                    <a href="#"><img src="./img/twitter.png" alt="" /></a>
+                    <a href="#"><img src="./img/instagram.png" alt="" /></a>
+                    <a href="#"><img src="./img/facebook.png" alt="" /></a>
+                </div>
+            </footer>
+            <br />
+            <div class="cr">
+                Criado e desenvolvido por
+                <a style="text-decoration: none" href=""> Team Lobien.</a> Todos os
+                direitos reservados.©
+            </div>
+            <br />
+</body>
+
+</html>
