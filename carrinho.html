@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/carrinho.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link rel="stylesheet" href="./css/carrinho.css">
-    <title>CARRINHO</title>
-</head>
-<body>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    
+    <title>CARRINHO DE COMPRAS</title>
+  </head>
+
+  <body>
     <!-- CABEÇALHO -->
     <header>
       <div class="logo">
@@ -34,15 +38,14 @@
           <img style="height: 30px" src="./img/cadastro-icon.png" alt="" />
         </a>
         <div class="cart">
-        <a href="#">
-          <span >0</span>
-          <img
-            style="height: 30px; margin-right: 8vw"
-            src="./img/carrinho-icon.png"
-            alt=""
-        /></a>
-      </div>
-        
+          <a href="./carrinho.html">
+            <span name="basket">0</span>
+            <img
+              style="height: 30px; margin-right: 8vw"
+              src="./img/carrinho-icon.png"
+              alt=""  
+          /></a>
+        </div>
       </div>
     </header>
     <!-- BARRA DE NAVEGAÇÃO -->
@@ -54,7 +57,6 @@
     </nav>
     <!-- LOGIN -->
     <section class="login">
-      <div class="seta_login"></div>
       <div class="form_login">
         <form>
           <label>Nome de usuário</label>
@@ -112,52 +114,55 @@
       });
     </script>
     <!-- Fechamento do LOGIN -->
-      <!-- PRINCIPAL -->
-      <div class="products-container">
-        <div class="product-header">
+    <!-- PRINCIPAL -->
+    <!-- PRINCIPAL -->
+    <div class="container-products">
+      <div class="product-header">
           <h5 class="product-title">PRODUTO</h5>
-          <h5 class="price">PRICE</h5>
-          <h5 class="quantidade">QUANTIDADE</h5>
+          <h5 class="price sm-hide">PREÇO</h5>
+          <h5 class="quantity">QUANTIDADE</h5>
           <h5 class="total">TOTAL</h5>
-        </div>
-        <div class="product">
+      </div>
+      <div class="products">
 
-        </div>
       </div>
-      <!-- RODAPÉ -->
+  </div>
+    <!-- RODAPÉ -->
     <footer>
-        <div class="rp1">
-          <img style="width: 230px; height: 230px" src="./img/logo-lobien.png" />
-        </div>
-  
-        <div class="rp2">
-          <h4>INFORMAÇÕES</h4>
-          <a style="text-decoration: none" href="#">SOBRE NÓS</a><br />
-          <a style="text-decoration: none" href="#">CONTATO</a>
-        </div>
-        <div class="rp3">
-          <h4>PRODUTOS</h4>
-          <a style="text-decoration: none" href="#">WOLF PACK</a><br />
-          <a style="text-decoration: none" href="#">HARDWARE</a>
-        </div>
-        <div class="rp4">
-          <h4>CONTA</h4>
-          <a style="text-decoration: none" href="#">MINHA CONTA</a><br />
-          <a style="text-decoration: none" href="#">MINHAS COMPRAS</a>
-          <br /><br />
-          <a href="#"><img src="./img/youtube.png" alt="" /></a>
-          <a href="#"><img src="./img/twitter.png" alt="" /></a>
-          <a href="#"><img src="./img/instagram.png" alt="" /></a>
-          <a href="#"><img src="./img/facebook.png" alt="" /></a>
-        </div>
-      </footer>
-      <br>
-      <div class="cr">
-        Criado e desenvolvido por
-        <a style="text-decoration: none" href=""> Team Lobien.</a> Todos os
-        direitos reservados.©
+      <div class="rp1">
+        <img style="width: 230px; height: 230px" src="./img/logo-lobien.png" />
       </div>
-      <br>
-      <script src="./js/wolfPack.js"></script>
-</body>
+
+      <div class="rp2">
+        <h4>INFORMAÇÕES</h4>
+        <a style="text-decoration: none" href="sobre.html">SOBRE NÓS</a><br />
+        <a style="text-decoration: none" href="contato.html">CONTATO</a>
+      </div>
+      <div class="rp3">
+        <h4>PRODUTOS</h4>
+        <a style="text-decoration: none" href="wolfPack.html">WOLF PACK</a><br />
+        <a style="text-decoration: none" href="wolfPack.html">HARDWARE</a>
+      </div>
+      <div class="rp4">
+        <h4>CONTA</h4>
+        <a style="text-decoration: none" href="#">MINHA CONTA</a><br />
+        <a style="text-decoration: none" href="#">MINHAS COMPRAS</a>
+        <br /><br />
+        <a href="#"><img src="./img/youtube.png" alt="" /></a>
+        <a href="#"><img src="./img/twitter.png" alt="" /></a>
+        <a href="#"><img src="./img/instagram.png" alt="" /></a>
+        <a href="#"><img src="./img/facebook.png" alt="" /></a>
+      </div>
+    </footer>
+    <br />
+    <div class="cr">
+      Criado e desenvolvido por
+      <a style="text-decoration: none" href=""> Team Lobien.</a> Todos os
+      direitos reservados.©
+    </div>
+    <br />
+    <script src="./js/wolfPack.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+  </body>
 </html>

@@ -1,140 +1,242 @@
-// console.log("running");
+//codigo adaptado proveniente de = https://www.youtube.com/watch?v=PoTGs38DR9E&t
+
 let carts = document.querySelectorAll('.add-cart');
 
-let products = [
+let products = [ 
     {
-        name: "RUFUS",
-        tag: "rufus",
-        price: 8500.99,
-        inCart:0
+        name: "Rufus",
+        tag: "Rufus_3",
+        price: 2500,
+        inCart: 0
     },
     {
-        name: "LUPUS",
-        tag: "lupus",
-        price: 8500.99,
-        inCart:0
+        name: "Lupus",
+        tag: "Lupus",
+        price: 9500,
+        inCart: 0
     },
     {
-        name: "SIMENSIS",
-        tag: "simensis",
-        price: 8500.99,
-        inCart:0
+        name: "Simensis",
+        tag: "Simensis_2",
+        price: 9500,
+        inCart: 0
     },
     {
-        name: "PROCESSADOR",
+        name: "Processador",
         tag: "processador",
-        price: 3101.10,
-        inCart:0
+        price: 5500.99,
+        inCart: 0
     },
     {
-        name: "PLACA DE VIDEO",
-        tag: "placaVideo",
-        price: 1679.69,
-        inCart:0
+        name: "Placa de vídeo NVIDIA GeForce RTX 3080 Ti",
+        tag: "placa de video",
+        price: 2500,
+        inCart: 0
     },
     {
-        name: "MEMORIA RAM",
-        tag: "memoriaRam",
-        price: 351.31,
-        inCart:0
+        name: "Memoria Ram 16GB",
+        tag: "memoria_ram",
+        price: 9500,
+        inCart: 0
     },
     {
-        name: "PLACA MAE",
-        tag: "placaMae",
-        price: 3914.25,
-        inCart:0
+        name: "Placa Mãe Asus Z690 TUF ",
+        tag: "placa_mãe",
+        price: 5500,
+        inCart: 0
     },
     {
-        name: "HDD",
-        tag: "hdd",
-        price: 1422.20,
-        inCart:0
+        name: "HD 4TBHard Drive Seagate 7200 RPM",
+        tag: "HD",
+        price: 3500,
+        inCart: 0
     },
     {
-        name: "SDD",
-        tag: "sdd",
-        price: 227.99,
-        inCart:0
-    },
-]
-for (let i=0; i < carts.length; i++){
+        name: "SSD 480 GB Kingston A400,",
+        tag: "SSD",
+        price: 6500,
+        inCart: 0
+    }
+];
+
+for(let i=0; i< carts.length; i++) {
     carts[i].addEventListener('click', () => {
         cartNumbers(products[i]);
         totalCost(products[i]);
-    })
+    });
 }
-function onLoadCartNumbers(){
-    let productNumbers = localStorage.getItem("cartNumbers");
-    if(productNumbers){
-        document.querySelector(".cart span").textContent = productNumbers; 
+
+function onLoadCartNumbers() {
+    let productNumbers = localStorage.getItem('cartNumbers');
+    if( productNumbers ) {
+        document.querySelector('.cart span').textContent = productNumbers;
     }
 }
-function cartNumbers(products){   
-    let productNumbers = localStorage.getItem("cartNumbers");   
+
+function cartNumbers(product, action) {
+    let productNumbers = localStorage.getItem('cartNumbers');
     productNumbers = parseInt(productNumbers);
-    
-    if (productNumbers){
+
+    let cartItems = localStorage.getItem('productsInCart');
+    cartItems = JSON.parse(cartItems);
+
+    if( action ) {
+        localStorage.setItem("cartNumbers", productNumbers - 1);
+        document.querySelector('.cart span').textContent = productNumbers - 1;
+        console.log("action running");
+    } else if( productNumbers ) {
         localStorage.setItem("cartNumbers", productNumbers + 1);
-        document.querySelector(".cart span").textContent = productNumbers + 1;
-    }   else {
-        localStorage.setItem("cartNumbers", 1);
-        document.querySelector(".cart span").textContent = 1;
-    }  
-    setItems(products) 
-}
-function setItems (products){
-    let cartItems = localStorage.getItem("productsInCart");
-    cartItems = JSON.parse(cartItems);
-
-    if(cartItems != null){
-        if(cartItems[products.tag] == undefined){
-            cartItems ={
-                ...cartItems,
-                [products.tag]: products
-            }
-        }
-        cartItems[products.tag].inCart += 1;
-    } else{
-        products.inCart = 1;
-        cartItems = {
-            [products.tag]: products
-    }
-    }
-    localStorage.setItem("productsInCart", JSON.stringify(cartItems));
-} 
-
-function totalCost(products){
-    // console.log("the product price is", products.price);
-    let cartCost = localStorage.getItem("totalCost");
-    
-    console.log("custo do meu carrinho", cartCost);
-    console.log(typeof cartCost);
-
-    if(cartCost != null){
-        cartCost = parseInt(cartCost);
-        localStorage.setItem("totalCost", cartCost + products.price);
+        document.querySelector('.cart span').textContent = productNumbers + 1;
     } else {
-        localStorage.setItem("totalCost", products.price);
+        localStorage.setItem("cartNumbers", 1);
+        document.querySelector('.cart span').textContent = 1;
+    }
+    setItems(product);
+}
+
+function setItems(product) {
+    let productNumbers = localStorage.getItem('cartNumbers');
+    productNumbers = parseInt(productNumbers);
+    let cartItems = localStorage.getItem('productsInCart');
+    cartItems = JSON.parse(cartItems);
+
+    if(cartItems != null) {
+        let currentProduct = product.tag;
+    
+        if( cartItems[currentProduct] == undefined ) {
+            cartItems = {
+                ...cartItems,
+                [currentProduct]: product
+            }
+        } 
+        cartItems[currentProduct].inCart += 1;
+
+    } else {
+        product.inCart = 1;
+        cartItems = { 
+            [product.tag]: product
+        };
+    }
+
+    localStorage.setItem('productsInCart', JSON.stringify(cartItems));
+}
+
+function totalCost( product, action ) {
+    let cart = localStorage.getItem("totalCost");
+
+    if( action) {
+        cart = parseInt(cart);
+
+        localStorage.setItem("totalCost", cart - product.price);
+    } else if(cart != null) {
+        
+        cart = parseInt(cart);
+        localStorage.setItem("totalCost", cart + product.price);
+    
+    } else {
+        localStorage.setItem("totalCost", product.price);
     }
 }
 
-function displayCart(){
-    let cartItems = localStorage.getItem("productsInCart");
+function displayCart() {
+    let cartItems = localStorage.getItem('productsInCart');
     cartItems = JSON.parse(cartItems);
-    let productContainer = document.querySelector(".products");
+
+    let cart = localStorage.getItem("totalCost");
+    cart = parseInt(cart);
+
+    let productContainer = document.querySelector('.products');
     
-    console.log(cartItems);
-    if (cartItems && productContainer ){
-        productContainer.innerHTML = "";
-        Object.values(cartItems).map(item =>{
+    if( cartItems && productContainer ) {
+        productContainer.innerHTML = '';
+        Object.values(cartItems).map( (item, wolfpack) => {
             productContainer.innerHTML += 
-            `<div class+"product">
-                <ion-icon name="close-circle-outline"></ion-icon>
-                <img src="./img/${item.tag}.png"
-                <span>${item.name}</span>
-             </div>   
-            `
+            `<div class="product"><ion-icon name="close-circle"></ion-icon><img src="./img/${item.tag}.png" />
+                <span class="sm-hide">${item.name}</span>
+            </div>
+            <div class="price sm-hide">$${item.price},00</div>
+            <div class="quantity">
+                <ion-icon class="decrease " name="arrow-dropleft-circle"></ion-icon>
+                    <span>${item.inCart}</span>
+                <ion-icon class="increase" name="arrow-dropright-circle"></ion-icon>   
+            </div>
+            <div class="total">$${item.inCart * item.price},00</div>`;
         });
+
+        productContainer.innerHTML += `
+            <div class="basketTotalContainer">
+            <h3 class="basketTotalTitle">Total a Pagar</h3>
+            <h3 class="basketTotal">$${cart},00</h3>
+            </div>`
+
+        deleteButtons();
+        manageQuantity();
+    }
+}
+
+function manageQuantity() {
+    let decreaseButtons = document.querySelectorAll('.decrease');
+    let increaseButtons = document.querySelectorAll('.increase');
+    let currentQuantity = 0;
+    let currentProduct = '';
+    let cartItems = localStorage.getItem('productsInCart');
+    cartItems = JSON.parse(cartItems);
+
+    for(let i=0; i < increaseButtons.length; i++) {
+        decreaseButtons[i].addEventListener('click', () => {
+            console.log(cartItems);
+            currentQuantity = decreaseButtons[i].parentElement.querySelector('span').textContent;
+            console.log(currentQuantity);
+            currentProduct = decreaseButtons[i].parentElement.previousElementSibling.previousElementSibling.querySelector('span').textContent.toLocaleLowerCase().replace(/ /g,'').trim();
+            console.log(currentProduct);
+
+            if( cartItems[currentProduct].inCart > 1 ) {
+                cartItems[currentProduct].inCart -= 1;
+                cartNumbers(cartItems[currentProduct], "decrease");
+                totalCost(cartItems[currentProduct], "decrease");
+                localStorage.setItem('productsInCart', JSON.stringify(cartItems));
+                displayCart();
+            }
+        });
+
+        increaseButtons[i].addEventListener('click', () => {
+            console.log(cartItems);
+            currentQuantity = increaseButtons[i].parentElement.querySelector('span').textContent;
+            console.log(currentQuantity);
+            currentProduct = increaseButtons[i].parentElement.previousElementSibling.previousElementSibling.querySelector('span').textContent.toLocaleLowerCase().replace(/ /g,'').trim();
+            console.log(currentProduct);
+
+            cartItems[currentProduct].inCart += 1;
+            cartNumbers(cartItems[currentProduct]);
+            totalCost(cartItems[currentProduct]);
+            localStorage.setItem('productsInCart', JSON.stringify(cartItems));
+            displayCart();
+        });
+    }
+}
+
+function deleteButtons() {
+    let deleteButtons = document.querySelectorAll('.product ion-icon');
+    let productNumbers = localStorage.getItem('cartNumbers');
+    let cartCost = localStorage.getItem("totalCost");
+    let cartItems = localStorage.getItem('productsInCart');
+    cartItems = JSON.parse(cartItems);
+    let productName;
+    console.log(cartItems);
+
+    for(let i=0; i < deleteButtons.length; i++) {
+        deleteButtons[i].addEventListener('click', () => {
+            productName = deleteButtons[i].parentElement.textContent.toLocaleLowerCase().replace(/ /g,'').trim();
+           
+            localStorage.setItem('cartNumbers', productNumbers - cartItems[productName].inCart);
+            localStorage.setItem('totalCost', cartCost - ( cartItems[productName].price * cartItems[productName].inCart));
+
+            delete cartItems[productName];
+            localStorage.setItem('productsInCart', JSON.stringify(cartItems));
+
+            displayCart();
+            onLoadCartNumbers();
+        })
     }
 }
 

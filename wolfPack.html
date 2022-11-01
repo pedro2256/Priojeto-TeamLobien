@@ -4,9 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/wolfPack.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <!-- <script src="./carrinho.html"></script> -->
+    
     <title>WOLF PACK</title>
   </head>
 
@@ -36,15 +38,14 @@
           <img style="height: 30px" src="./img/cadastro-icon.png" alt="" />
         </a>
         <div class="cart">
-        <a href="./carrinho.html">
-          <span >0</span>
-          <img
-            style="height: 30px; margin-right: 8vw"
-            src="./img/carrinho-icon.png"
-            alt=""
-        /></a>
-      </div>
-        
+          <a href="./carrinho.html">
+            <span name="basket">0</span>
+            <img
+              style="height: 30px; margin-right: 8vw"
+              src="./img/carrinho-icon.png"
+              alt=""
+          /></a>
+        </div>
       </div>
     </header>
     <!-- BARRA DE NAVEGAÇÃO -->
@@ -56,7 +57,6 @@
     </nav>
     <!-- LOGIN -->
     <section class="login">
-      <div class="seta_login"></div>
       <div class="form_login">
         <form>
           <label>Nome de usuário</label>
@@ -138,8 +138,8 @@
 
           <div class="preco1">
             <div class="preconunber">
-              <span class="preco-mais"> <s> R$10.000,00</s></span>
-              <span class="preco-menos"> R$8.500,99 </span>
+              <span class="preco-mais"> <s> R$3.999,99</s></span>
+              <span class="preco-menos"> R$2.500,00 </span>
             </div>
             <a class="add-cart cart1" href="#">COMPRAR</a>
           </div>
@@ -163,8 +163,8 @@
           SSD 2TB NVME SN850, HD 4TB
           <div class="preco2">
             <div class="preconunber">
-              <span class="preco-mais"> <s> R$10.000,00</s></span>
-              <span class="preco-menos"> R$8.500,99 </span>
+              <span class="preco-mais"> <s> R$10.999,99</s></span>
+              <span class="preco-menos"> R$9.500,00 </span>
             </div>
             <a class="add-cart cart2" href="#">COMPRAR</a>
           </div>
@@ -187,8 +187,8 @@
 
           <div class="preco3">
             <div class="preconunber">
-              <span class="preco-mais"> <s> R$10.000,00</s></span>
-              <span class="preco-menos"> R$8.500,99 </span>
+              <span class="preco-mais"> <s> R$7.999,99</s></span>
+              <span class="preco-menos"> R$8.500,00 </span>
             </div>
             <a class="add-cart cart3" href="#">COMPRAR</a>
           </div>
@@ -199,18 +199,19 @@
     <!-- começo parte de HARDWARE -->
     <div class="all">
       <h1 id="txt1">HARDWARE</h1>
-      <h3 id="txt2">Alta Performance</h3>
       <div class="grid">
         <div class="col">
-          
           <img src="img/processador.png" />
           <p id="txt_auxiliar">
             Processador Intel Core i5 12600 3.3GHz (4.8GHz Turbo), 12ª Geração,
             6-Cores 12-Threads, LGA 1700, BX8071512600
           </p>
-          <h4>R$ 3.101,10</h4>
-          <div class="btnH">
-            <a class="add-cart cart4" href="#">COMPRAR</a>
+          <div class="preco1">
+            <div class="preconunber">
+              <span class="preco-mais"> <s> R$6.999,99</s></span>
+              <span class="preco-menos"> R$5.500,99 </span>
+            </div>
+            <a class="add-cart cart4" href="#"><h6>COMPRAR</h6></a>
           </div>
         </div>
 
@@ -220,11 +221,12 @@
             Placa de vídeo NVIDIA GeForce RTX 3080 Ti 12GB Cuda Cores: 10240.
             Clock: 1.67GHz.
           </p>
-          <h4>R$1.679,69</h4>
-          <div class="btnH">
-            <div class="btnH">
-              <a class="add-cart cart5" href="#">COMPRAR</a>
+          <div class="preco1">
+            <div class="preconunber">
+              <span class="preco-mais"> <s> R$3.999,99</s></span>
+              <span class="preco-menos"> R$2.500,00 </span>
             </div>
+            <a class="add-cart cart5" href="#"><h6>COMPRAR</h6></a>
           </div>
         </div>
 
@@ -234,9 +236,12 @@
             Memória 4x 16GB DDR4 3600Mhz Total: 64GB. Clock: 3600Mhz. Dual
             Channel
           </p>
-          <h4>R$ 351,31</h4>
-          <div class="btnH">
-            <a class="add-cart cart6" href="#">COMPRAR</a>
+          <div class="preco1">
+            <div class="preconunber">
+              <span class="preco-mais"> <s> R$2.999,99</s></span>
+              <span class="preco-menos"> R$1.500,00 </span>
+            </div>
+            <a class="add-cart cart6" href="#"><h6>COMPRAR</h6></a>
           </div>
         </div>
 
@@ -246,18 +251,24 @@
             Asus Z690 TUF | Wifi 6 e Bluetooth 5.1 750W | Cooler Master 2 | 2x
             USB 3.0 | 8 | 6x USB 3.2 - 2x USB 3.2 Type-C
           </p>
-          <h4>R$ 3.914,25</h4>
-          <div class="btnH">
-            <a class="add-cart cart7" href="#">COMPRAR</a>
+          <div class="preco1">
+            <div class="preconunber">
+              <span class="preco-mais"> <s> R$6.999,99</s></span>
+              <span class="preco-menos"> R$5.500,00 </span>
+            </div>
+            <a class="add-cart cart7" href="#"><h6>COMPRAR</h6></a>
           </div>
         </div>
 
         <div class="col">
           <img src="img/HD.png" />
           <p id="txt_auxiliar">HD 4TBHard Drive Seagate 7200 RPM</p>
-          <h4>R$ 1.422,20</h4>
-          <div class="btnH">
-            <a class="add-cart cart8" href="#">COMPRAR</a>
+          <div class="preco1">
+            <div class="preconunber">
+              <span class="preco-mais"> <s> R$4.999,99</s></span>
+              <span class="preco-menos"> R$3.500,00 </span>
+            </div>
+            <a class="add-cart cart8" href="#"><h6>COMPRAR</h6></a>
           </div>
         </div>
 
@@ -267,9 +278,12 @@
             SSD 480 GB Kingston A400, SATA, Leitura: 500MB/s e Gravação: 450MB/s
             - SA400S37/480G
           </p>
-          <h4>R$ 227,99</h4>
-          <div class="btnH">
-            <a class="add-cart cart9" href="#">COMPRAR</a>
+          <div class="preco1">
+            <div class="preconunber">
+              <span class="preco-mais"> <s> R$7.999,99</s></span>
+              <span class="preco-menos"> R$6.500,00 </span>
+            </div>
+            <a class="add-cart cart9" href="#"><h6>COMPRAR</h6></a>
           </div>
         </div>
       </div>
@@ -283,13 +297,13 @@
 
       <div class="rp2">
         <h4>INFORMAÇÕES</h4>
-        <a style="text-decoration: none" href="#">SOBRE NÓS</a><br />
-        <a style="text-decoration: none" href="#">CONTATO</a>
+        <a style="text-decoration: none" href="sobre.html">SOBRE NÓS</a><br />
+        <a style="text-decoration: none" href="contato.html">CONTATO</a>
       </div>
       <div class="rp3">
         <h4>PRODUTOS</h4>
-        <a style="text-decoration: none" href="#">WOLF PACK</a><br />
-        <a style="text-decoration: none" href="#">HARDWARE</a>
+        <a style="text-decoration: none" href="wolfPack.html">WOLF PACK</a><br />
+        <a style="text-decoration: none" href="wolfPack.html">HARDWARE</a>
       </div>
       <div class="rp4">
         <h4>CONTA</h4>
@@ -310,5 +324,6 @@
     </div>
     <br />
     <script src="./js/wolfPack.js"></script>
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
   </body>
 </html>
